@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- início do bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <!-- fim do bootstrap -->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Sobre Nós</title>
+  </head>
+  <body id="body_sobreNos">
+    <header id="header">
+      <img
+        src="imagens/imgs_sobreNos/cogulo_logo.png"
+        style="height: 70px; padding-left: 16px; box-sizing: border-box"
+        alt=""
+      />
+      <nav id="nav">
+        <button
+          aria-label="Abrir Menu"
+          id="btn-mobile"
+          aria-haspopup="true"
+          aria-controls="menu"
+          aria-expanded="false"
+        >
+          Menu
+          <span id="hamburger"></span>
+        </button>
+        <ul id="menu" role="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="oque_sao_apis.html">O que são API's</a></li>
+          <li><a href="cep.html">CEP</a></li>
+          <li><a href="dolar.html">Dólar</a></li>
+          <li><a href="api_para_json.html">API para JSON</a></li>
+          <li><a href="formulario_impressao.html">Formulário</a></li>
+          <li><a href="api_fake.html">API Fake</a></li>
+          <li><a href="clima.html">Clima</a></li>
+          <li><a href="sobre_nos.html">Sobre Nós</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <div class="row div_h1_sobre">
+        <div class="col-md-12 div_h1_sobre">
+          <div id="so_h1_sobreNos">
+            <h1 class="h1_sobre">Sobre nós</h1>
+          </div>
+          <p id="descricao_SobreNos">
+            A equipe mais pronta para apresentar as API's para vocês. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit ratione incidunt cum.
+          </p>
+        </div>
+      </div>
+      <div class="row div_h2_sobre">
+        <div class="col-md-6">
+          <h2 id="h2_sobreNos">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A provident modi recusandae!</h2>
+          <img src="imagens/imgs_sobreNos/img1.png" alt="" />
+        </div>
+
+        <div class="col-md-6">
+          <p id="p_SobreNos">
+            As APIs (Application Programming Interfaces) são um conjunto de
+            padrões que fazem parte de uma interface. Elas permitem a criação de
+            plataformas de maneira mais simples e prática para desenvolvedores.
+            A partir de APIs, é possível criar softwares, aplicativos, programas
+            e plataformas diversas. Por exemplo, apps desenvolvidos para
+            celulares Android e iPhone (iOS) são criados a partir de padrões
+            definidos e disponibilizados pelas APIs de cada sistema operacional.
+            Mas, afinal, o que é uma API? Ela é uma sigla em inglês para
+            Application Programming Interface, ou interface de programação de
+            aplicações. As interfaces de programação de aplicativos (APIs) são
+            conjuntos de ferramentas, definições e protocolos para a criação de
+            aplicações de software. APIs conectam soluções e serviços, sem a
+            necessidade de saber como esses elementos foram implementados.
+            Existem quatro maneiras diferentes pelas quais as APIs podem
+            funcionar, dependendo de quando e por que elas foram criadas,
+            incluindo APIs SOAP, APIs RPC, APIs WebSocket e APIs REST. A
+            arquitetura da API geralmente é explicada em termos de cliente e
+            servidor, onde o cliente envia uma solicitação para o servidor, que
+            geralmente responde com uma resposta.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      window.onscroll = function () {
+        var cor_do_texto = document.getElementById("p_SobreNos");
+
+        var scrollTop =
+          document.documentElement.scrollTop || document.body.scrollTop;
+
+        if (scrollTop > 0) {
+          document.body.style.backgroundColor = "#ce4f64";
+        } else {
+          document.body.style.backgroundColor = "#4e4cce";
+        }
+      };
+    </script>
+  </body>
+</html>

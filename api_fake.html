@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- início do bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <!-- fim do bootstrap -->
+    <link rel="stylesheet" href="css/style.css " />
+    <title>API Fake</title>
+  </head>
+
+  <body id="body_apiFake">
+    <main>
+      <header id="header">
+        <img
+          src="imagens/imgs_sobreNos/cogulo_logo.png"
+          style="height: 70px; padding-left: 16px; box-sizing: border-box"
+          alt=""
+        />
+        <nav id="nav">
+          <button
+            aria-label="Abrir Menu"
+            id="btn-mobile"
+            aria-haspopup="true"
+            aria-controls="menu"
+            aria-expanded="false"
+          >
+            Menu
+            <span id="hamburger"></span>
+          </button>
+          <ul id="menu" role="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="oque_sao_apis.html">O que são API's</a></li>
+            <li><a href="cep.html">CEP</a></li>
+            <li><a href="dolar.html">Dólar</a></li>
+            <li><a href="api_para_json.html">API para JSON</a></li>
+            <li><a href="formulario_impressao.html">Formulário</a></li>
+            <li><a href="api_fake.html">API Fake</a></li>
+            <li><a href="clima.html">Clima</a></li>
+            <li><a href="sobre_nos.html">Sobre Nós</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="bol bola1_apiFake"></div>
+      <div class="bol bola2_apiFake"></div>
+      <div class="bol bola3_apiFake"></div>
+      <div class="bol bola4_apiFake"></div>
+
+      <h3 class="h3Index">Qual cachorrinho você quer saber mais sobre?</h3>
+      <div class="botoes">
+        <button id="botao1" onclick="botao1(), mudaBG()">
+          <img src="imagens/imgs_apiFake/dobermannIMG.png" alt="" />
+          <p>Dobermann</p>
+        </button>
+        <button id="botao2" onclick="botao2(), mudaBG()">
+          <img src="imagens/imgs_apiFake/corgieIMG.png" alt="" />
+          <p>Corgie</p>
+        </button>
+        <button id="botao3" onclick="botao3(), mudaBG()">
+          <img src="imagens/imgs_apiFake/pugIMG.png" alt="" />
+          <p>Pug</p>
+        </button>
+        <button id="botao4" onclick="botao4(), mudaBG()">
+          <img src="imagens/imgs_apiFake/pastorAlemaoIMG.png" alt="" />
+          <p>Pastor Alemão</p>
+        </button>
+        <button id="botao5" onclick="botao5(), mudaBG()">
+          <img src="imagens/imgs_apiFake/goldenIMG.png" alt="" />
+          <p>Golden Retriver</p>
+        </button>
+        <button id="botao6" onclick="botao6(), mudaBG()">
+          <img src="imagens/imgs_apiFake/beagleIMG.png" alt="" />
+          <p>Beagle</p>
+        </button>
+      </div>
+      <div class="container-Direita">
+        <div id="div_mudaCor">
+          <div id="raca"></div>
+          <br />
+          <div id="descricao"></div>
+        </div>
+      </div>
+    </main>
+    <script src="javascript/script.js"></script>
+  </body>
+</html>

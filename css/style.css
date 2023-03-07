@@ -1,0 +1,745 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+
+/* -------------------------configurações padrâo------------------------------ */
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #7e1643;
+}
+
+a:hover {
+  color: #000;
+  transition: 0.3s;
+}
+
+#body_form {
+  background-color: #0a009b;
+}
+
+#logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#header {
+  box-sizing: border-box;
+  height: 70px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  z-index: 2;
+  position: relative;
+}
+
+#menu {
+  display: flex;
+  list-style: none;
+  gap: 0.5rem;
+}
+
+#menu a {
+  display: block;
+  padding: 0.5rem;
+}
+
+#btn-mobile {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  #menu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    right: 0px;
+    background: #e7e7e7;
+    transition: 0.6s;
+    z-index: 1000;
+    height: 0px;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+
+  #nav.active #menu {
+    height: calc(100vh - 70px);
+    visibility: visible;
+    overflow-y: auto;
+  }
+
+  #menu a {
+    padding: 1rem 0;
+    margin: 0 1rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+  }
+
+  #btn-mobile {
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+
+  #hamburger {
+    border-top: 2px solid;
+    width: 20px;
+  }
+
+  #hamburger::after,
+  #hamburger::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: 0.3s;
+    position: relative;
+  }
+
+  #nav.active #hamburger {
+    border-top-color: transparent;
+  }
+
+  #nav.active #hamburger::before {
+    transform: rotate(135deg);
+  }
+
+  #nav.active #hamburger::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+}
+
+.bol {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* //////////////////
+/////////////
+////////// */
+
+/* ------------------------ HOME ----------------- */
+#body_index {
+  background-color: #121212;
+}
+
+.titulo_index {
+  margin-top: 15%;
+  position: relative;
+  margin-left: 40%;
+  font-size: 5rem;
+  color: blue;
+}
+
+.subtitulo_index {
+  color: #929292;
+  margin-left: 40%;
+
+  position: relative;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.circulo1_index {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: violet;
+  clip-path: circle(48% at top left);
+}
+
+.circulo2_index {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #e51e2a;
+  clip-path: circle(35% at bottom right);
+}
+
+/* //////////////////////////FORMULÁRIO/////////////////////// */
+.one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5vh;
+}
+
+.main_form {
+  background: white;
+  max-width: fit-content;
+  max-height: fit-content;
+  padding: 2.5rem;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+main h2 {
+  font-weight: 600;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+main h2::before {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 25px;
+  bottom: 3px;
+  left: 0;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #ea2e2e, #ff943c);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-field {
+  position: relative;
+}
+
+form .input-field {
+  margin-bottom: 0.5rem;
+}
+
+.input-field .underline::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  bottom: -2px;
+  left: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.input-field .underline::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  bottom: -2px;
+  left: 0;
+  background: linear-gradient(45deg, #ea2e2e, #ff943c);
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+  transform-origin: left;
+}
+
+.input-field input:focus ~ .underline::after {
+  transform: scaleX(1);
+}
+
+.input-field input {
+  outline: none;
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+}
+
+.input-field input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+input[type="submit"] {
+  margin-top: 2rem;
+  padding: 0.4rem;
+  width: 100%;
+  background: linear-gradient(to left, #ea2e2e, #ff943c);
+  cursor: pointer;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 300;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  letter-spacing: 0.5px;
+  background: linear-gradient(to right, #ea2e2e, #ff943c);
+}
+
+/* --------------------para impressão------------------------- */
+@media print {
+  .main_form {
+    box-shadow: none;
+  }
+
+  #input,
+  #header {
+    display: none;
+  }
+}
+
+/* ////////////// */
+/* -----------------------API FAKE--------------------------- */
+#body_apiFake {
+  background-color: #ffdead;
+}
+
+.h3Index {
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  margin-top: 2.5%;
+  font-weight: 600;
+  text-align: center;
+}
+
+.container-Direita {
+  margin: 0 auto;
+  width: 50%;
+  margin-top: 4%;
+  font-family: "Karla", sans-serif;
+  color: aliceblue;
+  font-size: 1.5rem;
+}
+
+.botoes {
+  display: flex;
+  position: absolute;
+  width: 93%;
+  justify-content: center;
+  height: 20%;
+  bottom: 0;
+  margin-bottom: 3%;
+}
+
+button img {
+  height: 80px;
+}
+
+button img:hover {
+  transition: 0.5s;
+  height: 90px;
+  cursor: pointer;
+}
+
+button {
+  padding-left: 7%;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+button p {
+  width: 100%;
+  padding-left: 7%;
+  padding-top: 2%;
+}
+
+.bola1_apiFake {
+  background-color: #1e90ff;
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: circle(40% at left top);
+}
+
+.bola2_apiFake {
+  background-color: #7fffd4;
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: circle(30% at right top);
+}
+
+.bola3_apiFake {
+  background-color: #ff69b4;
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: circle(30% at 30% bottom);
+}
+
+.bola4_apiFake {
+  background-color: #daa520;
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: circle(20% at 90% 100%);
+}
+
+/* --------------------- API CLIMA ---------------------------- */
+#main_clima {
+  background: url(../imagens/imgs_apiClima/fundo_clima.png);
+  background-color: #daa520;
+  background-size: cover;
+}
+
+#omaior {
+  background-image: url("../imagens/imgs_apiClima/1295100.svg");
+  background-size: 100%;
+  height: 300px;
+  text-align: center;
+  width: 350px;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+}
+
+#local {
+  margin-left: 10%;
+  padding: 0.7%;
+  padding-left: 20px;
+  width: 200px;
+  height: 50px;
+  border-radius: 100px;
+  outline: none;
+}
+
+#btn_clima {
+  background-color: #0000b1;
+  margin: 0;
+  padding: 0;
+  padding: 20px;
+  border-radius: 50px;
+  color: white;
+}
+
+#btn_clima:hover {
+  padding: 22px;
+  transition: 0.3s;
+  background-color: #2929c0;
+}
+
+#temperatura {
+  margin-left: 30%;
+  margin-top: 40%;
+  width: 10rem;
+}
+
+/* -----------------------API DÓLAR--------------------------- */
+#main_dolar {
+  background-color: #4169e1;
+  height: 92.8vh;
+  z-index: 2;
+}
+
+#valor_Dolar,
+#valor_Real {
+  position: relative;
+  z-index: 2;
+}
+
+#h1_dolar,
+#titulo_Dolar,
+#dolar_input {
+  position: relative;
+  z-index: 100;
+  margin-top: 20%;
+}
+
+#dolar_input {
+  border: none;
+  outline: none;
+  color: black;
+  margin-top: 1%;
+}
+
+.bol-dolar {
+  z-index: 0;
+}
+
+.bol1_dolar {
+  display: flex;
+  background-color: burlywood;
+  clip-path: circle(50% at top right);
+  animation: transform;
+}
+
+.bol2_dolar {
+  clip-path: circle(20% at bottom left);
+  background-color: #7e1643;
+}
+
+.bol3_dolar {
+  clip-path: circle(40% at top left);
+  background-color: #ff943c;
+}
+
+.alinha_centro_cep {
+  margin-top: 15%;
+}
+
+#titulo-valor_dolar {
+  font-size: x-large;
+  padding-top: 40px;
+  font-weight: bold;
+}
+
+.valor_dolar {
+  color: white;
+}
+
+
+
+
+
+
+
+/* //////////////////O QUE SÃO API'S///////////////////// */
+.circulo3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: circle(60%);
+  overflow: hidden;
+  background: #0000b1;
+  animation: zoom 4s linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(0.5);
+    clip-path: circle(10%);
+    z-index: -1;
+  }
+
+  25% {
+    transform: scale(1);
+    clip-path: circle(20%);
+    z-index: -1;
+  }
+
+  50% {
+    transform: scale(1);
+    clip-path: circle(50%);
+    z-index: -1;
+  }
+
+  100% {
+    transform: scale(1);
+    clip-path: circle(100%);
+    z-index: -1;
+  }
+}
+
+.circulo4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #76a6ff;
+  clip-path: circle(40% at bottom left);
+  z-index: -1;
+}
+
+.circulo5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #76a6ff;
+  clip-path: circle(27% at top right);
+  z-index: -1;
+}
+
+#h1_oQueSaoAPIs {
+  color: white;
+  top: 0;
+  left: 0;
+  display: flex;
+  margin-top: 15%;
+  margin-left: 15%;
+  z-index: 10;
+}
+
+#p_oqueSaoAPIs {
+  margin-top: 2%;
+  margin-left: 18%;
+  font-size: large;
+  color: white;
+  width: 75%;
+  text-align: justify;
+}
+
+
+
+
+/*---------------------------------API CEP ---------------------------------*/
+
+#body_cep {
+  background-color: #e6e6fa;
+}
+
+.input_cep {
+  position: relative;
+  border-bottom: 1px solid red;
+  /*margin: 12px 5px;*/
+  --accent-color: #a3e583;
+}
+
+.textInputWrapper:focus-within:after {
+  border-bottom: 2px solid var(--accent-color);
+  transform: scaleX(1);
+}
+
+.formu_cep {
+  background-color: #ceceff;
+  margin-top: 12.5%;
+  padding: 7%;
+  padding-left: 5%;
+  padding-right: 5%;
+  border-radius: 10%;
+}
+
+.formu_cep .teste_a {
+  margin-top: 5%;
+}
+
+@media (min-width: 768px) and (max-width: 990px) {
+  .teste_aa {
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    width: 100%;
+  }
+
+  .teste_a {
+    width: 100%;
+    columns: 1;
+  }
+}
+
+@media (max-width: 767px){
+  .teste_aa {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #legend_cep {
+    text-align: center;
+  }
+}
+
+.input_cep {
+  padding: 4px;
+}
+
+.input_cep:focus {
+  outline: none;
+  padding: 4.5px;
+  border-bottom: 1px solid blue;
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  will-change: transform;
+}
+
+.titulo_cep {
+  margin-top: 25%;
+}
+
+#obs_cep {
+  text-align: center;
+}
+
+#h1_apiCep {
+  color: #1c1c1c;
+}
+
+
+
+/*---------------------API PARA JSON --------------------------*/
+#body_apiParaJson {
+  background-color: #c17070;
+}
+
+.bola1_apiJson 
+{
+  clip-path: circle(52% at 68% center);
+  background-color: #2f009c;
+  z-index: -1;
+}
+
+.bola2_apiJson {
+  clip-path: circle(25% at bottom left);
+  background-color: blueviolet;
+}
+
+#h1_apiJson {
+  margin-top: 10%;
+  color: #e7e7e7;
+}
+
+.teste {
+  color: white;
+}
+
+
+
+/* ////////////////////////SOBRE NÓS////////////////////////// */
+#body_sobreNos {
+  background-color: rgb(78, 76, 206);
+  transition: 3s ease;
+}
+
+.div_h1_sobre {
+  text-align: center;
+}
+
+#so_h1_sobreNos {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+}
+
+.h1_sobre {
+  display: flex;
+  text-align: center;
+  width: fit-content;
+  margin-top: 2%;
+}
+
+#descricao_SobreNos {
+  color: antiquewhite;
+}
+
+#p_SobreNos {
+  margin-top: 20%;
+  color: white;
+}
+
+#h2_sobreNos {
+  margin-top: 8%;
+  color: #7fffd4;
+}

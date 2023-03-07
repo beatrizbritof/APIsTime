@@ -1,0 +1,23 @@
+{
+    "pop": {
+   "name": "Taylor Swwift",
+   "album": "1989",
+   "style": "Pop",
+   "price": "$15",
+   "image": "<img src='imagens/imgs_apiJson/taylor_1989(1).jpg' width='300px'>"
+ },
+ "samba": {
+   "name": "Adoniran Barbosa",
+   "album": "Adoniran Barbosa e Convidados",
+   "style": "Samba",
+   "price": "R$50",
+   "image": "<img src='imagens/imgs_apiJson/adoniran_album.jpg' width='300px'>"
+ },
+ "funk": {
+   "name": "MC Ryan SP",
+   "album": "Hat Trick do Tubarão",
+   "style": "Funk",
+   "price": "R$20",
+   "image": "<img src='imagens/imgs_apiJson/mcRyanAlbum(1).jpg' width='300px'>"
+ }
+ }
